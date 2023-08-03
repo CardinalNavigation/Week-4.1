@@ -69,17 +69,17 @@ console.log("Aquire the last array number:", getLast([1, 2, 3, 4, 5]));
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 
 function find(value, array) {
-  for (value of array) {
-    if (value == true) {
+  for (let x = 0; x < array.length; x++) {
+    if (array[x] === value) {
       return true;
     }
-    else if (value == false) {
+    if (array[x] !== value) {
       return false;
     }
   }
 }
- 
-console.log(find(1, [1, 2, 3, 4,]))
+
+console.log(find(2, [1, 2, 3, 4,]))
 
 // ----------------------
 // Stretch Goals
