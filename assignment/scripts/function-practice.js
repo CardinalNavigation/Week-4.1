@@ -73,13 +73,13 @@ function find(value, array) {
     if (array[x] === value) {
       return true;
     }
-    if (array[x] !== value) {
-      return false;
-    }
+    return false;
   }
 }
 
-console.log(find(2, [1, 2, 3, 4,]))
+console.log(find(4, [1, 2, 3, 4,]))
+console.log(find(6, [1, 2, 3, 4,]))
+
 
 // ----------------------
 // Stretch Goals
