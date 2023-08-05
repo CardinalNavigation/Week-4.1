@@ -71,7 +71,7 @@ console.log("Aquire the last array number:", getLast([1, 2, 3, 4, 5]));
 function find(value, array) {
   for (let x = 0; x < array.length; x++) {
     // the above allows us to search out the values in the array, starting with the first index [0]
-    // and moving to the next iteration if the conditions below the for conditional are not met
+    // and moving to the next iteration if the conditions below the for loop are not met
     if (array[x] === value) {
       return true;
       // this if condition searches each array index, if it cannot log true, then it loops to the next in line
@@ -94,9 +94,24 @@ console.log(find(6, [1, 2, 3, 4,]))
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {
 
+// we are going to pull the first letter out of the first string number
+
+
+function isFirstLetter(letter, string) {
+  //first we need to add a condition that shows we are grabbing index[0]
+  //out of a string. We start by using an if statement to see if 
+  //the first letter can be pulled out of the array treating any string like an array, 
+  for (let x = 0; x < string.length; x++) {
+    if (string[0] === letter) {
+      return true;
+    }
+  }
+  return false;
 }
+
+
+
 console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
 console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 
