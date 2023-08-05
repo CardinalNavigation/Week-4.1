@@ -70,11 +70,19 @@ console.log("Aquire the last array number:", getLast([1, 2, 3, 4, 5]));
 
 function find(value, array) {
   for (let x = 0; x < array.length; x++) {
+    // the above allows us to search out the values in the array, starting with the first index [0]
+    // and moving to the next iteration if the conditions below the for conditional are not met
     if (array[x] === value) {
       return true;
+      // this if condition searches each array index, if it cannot log true, then it loops to the next in line
+      // when it hits true the loop ends
     }
-    return false;
   }
+  return false;
+  // having the "return false" outside of the if loop allows the loop to close with a boolean false
+  // when the if condition reaches the end of the array.
+  // before I had the false condition nestled into the if with and if else statement after, and that did not work
+  // because the return statement ended the loop. 
 }
 
 console.log(find(4, [1, 2, 3, 4,]))
