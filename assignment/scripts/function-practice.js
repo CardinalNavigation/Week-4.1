@@ -116,12 +116,26 @@ console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
 console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll() {
-  let sum = 0;
-  // TODO: loop to add items
 
-  // TODO: return the sum
+// TODO: loop to add items
+// TODO: return the sum
+// start with for loop to list the items in the array
+// sum= sum + x takes 0, then adds each idex items in the array first to the last
+// I later realized it need to use array[x] not just x. It was giving me 10 not 15. 
+//returning the sum will show is the result of the array
+
+function sumAll(array) {
+  let sum = 0;
+  console.log(array)
+  for (let x = 0; x < array.length; x++) {
+    sum += (array[x]);
+    console.log(sum)
+  }
+  console.log(sum);
+  return sum;
 }
+
+console.log(sumAll([1, 2, 3, 4, 5]))
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
