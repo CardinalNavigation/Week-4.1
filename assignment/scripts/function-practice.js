@@ -150,13 +150,22 @@ console.log(sumAll([1, 2, 3, 4, 5]))
 function allPositive(array) {
   for (let x = 0; x < array.length; x++) {
     console.log(array[x]);
-    if (array[x] < 0) {
-      console.log([x]);
+    if (array[x] <= 0) {
+      array.splice([x], 0)
+      console.log(array);
     }
   }
 }
+console.log(allPositive([-2, -1, 0, 1, 2, 3]))
 
-console.log(allPositive([1, 2, 3, 4, 5]))
+// function emptyArray() {
+//   if (array[x] <= 0) {
+
+//   }
+//   console.log(array[x])
+// }
+
+
 
 //either way i would like to know how this is resolved. I have poured too many hours into it to feel
 //like continuing is productive.
