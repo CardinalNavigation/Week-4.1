@@ -127,7 +127,6 @@ function sumAll(array) {
   console.log(array)
   for (let x = 0; x < array.length; x++) {
     sum += (array[x]);
-    console.log(sum)
   }
   console.log(sum);
   return sum;
@@ -138,15 +137,29 @@ console.log(sumAll([1, 2, 3, 4, 5]))
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
+//its either:
+// let value = 0;
+
+// function allPositive() {
+//   return value > 0;
+// }
+
+// console.log(allPositive(-2, -1, 0, 1, 2, 3))
+
+//or its:
 function allPositive(array) {
   for (let x = 0; x < array.length; x++) {
-    console.log(array);
+    console.log(array[x]);
     if (array[x] < 0) {
-      console.log(array[x]);
+      console.log([x]);
     }
   }
 }
+
 console.log(allPositive([1, 2, 3, 4, 5]))
+
+//either way i would like to know how this is resolved. I have poured too many hours into it to feel
+//like continuing is productive.
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
