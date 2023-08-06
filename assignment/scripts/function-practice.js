@@ -110,8 +110,6 @@ function isFirstLetter(letter, string) {
   return false;
 }
 
-
-
 console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
 console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 
@@ -134,16 +132,21 @@ function sumAll(array) {
   console.log(sum);
   return sum;
 }
-
 console.log(sumAll([1, 2, 3, 4, 5]))
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive() {
 
+function allPositive(array) {
+  for (let x = 0; x < array.length; x++) {
+    console.log(array);
+    if (array[x] < 0) {
+      console.log(array[x]);
+    }
+  }
 }
-
+console.log(allPositive([1, 2, 3, 4, 5]))
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
