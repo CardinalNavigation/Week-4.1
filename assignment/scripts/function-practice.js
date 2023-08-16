@@ -15,12 +15,13 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
+  console.log("expect Name:", name)
   return "Hello, Your Name!";
 }
 // Remember to call the function to test
 
-helloName()
-console.log(helloName());
+helloName("Matthew")
+// console.log(helloName());
 
 // 3. Function to add two numbers together & return the result
 function addNumbers(firstNumber, secondNumber) {
@@ -102,14 +103,14 @@ function isFirstLetter(letter, string) {
   //first we need to add a condition that shows we are grabbing index[0]
   //out of a string. We start by using an if statement to see if 
   //the first letter can be pulled out of the array treating any string like an array, 
-  for (let x = 0; x < string.length; x++) {
-    if (string[0] === letter) {
-      return true;
-    }
+  //for (let x = 0; x < string.length; x++) {
+  if (string[0] === letter) {
+    return true;
+    console.log("Hi")
   }
+  // }
   return false;
 }
-
 console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
 console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 
