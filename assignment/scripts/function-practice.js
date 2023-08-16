@@ -15,13 +15,19 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
-  console.log("expect Name:", name)
+  // console.log("expect Name:", name)
   return "Hello, Your Name!";
 }
 // Remember to call the function to test
 
+// Added the Code Below,
+// so that the parameter is filled.
+// The test on is asking for "Hello, Your Name",
+// Is that what this should be showing or should it
+// be whatever string is here? That a point of confusion.
+
 helloName("Matthew")
-// console.log(helloName());
+console.log(helloName("Matthew"));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers(firstNumber, secondNumber) {
